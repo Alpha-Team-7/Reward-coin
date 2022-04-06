@@ -35,10 +35,10 @@ contract Nxt {
     }
 
     function triggerMint() public onlyOwner {
-        nestCoin.mint(_msgSender(), amount);
+        nestcoin.mint(_msgSender(), amount);
     }
 
-    function burn(uint256 amount) public {
+    function burn() public {
         _burn(_msgSender(), amount);
     }
 }
