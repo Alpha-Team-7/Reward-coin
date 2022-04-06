@@ -22,7 +22,7 @@ contract Nxt {
 
     }
 
-    function triggerMint() payable external {
+    function triggerMint() public onlyOwner {
         NestCoin.mint()
     }
 
