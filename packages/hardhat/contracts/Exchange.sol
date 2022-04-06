@@ -4,10 +4,7 @@ pragma solidity >=0.8.0 <0.9.0;
 
 import "hardhat/console.sol";
 import "./Nestcoin.sol";
-import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
-import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
-import "@openzeppelin/contracts/access/Ownable.sol";
-import "@openzeppelin/contracts/utils/Counters.sol";
+
 
 contract Nxt {
     NestCoin public nestcoin;
@@ -25,21 +22,13 @@ contract Nxt {
 
     }
 
-    using Counters for Counters.Counter;
-
-    Counters.Counter private _tokenIdCounter;
-
-    function safeMint(address to, string memory uri) public onlyOwner {
-        uint256 tokenId = _tokenIdCounter.current();
-        _tokenIdCounter.increment();
-        _safeMint(to, tokenId);
-        _setTokenURI(tokenId, uri);
+    function triggerMint() payable external {
+        NestCoin.mint()
     }
 
-    function _burn(uint256 tokenId)
-        internal override(ERC721, ERC721URIStorage)
-    {
-        super._burn(tokenId);
+    function burn(uint256 amount) public {
+        _burn(_msgSender(), amount);
     }
+
 }
 
