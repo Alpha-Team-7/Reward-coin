@@ -29,8 +29,6 @@ import externalContracts from "./contracts/external_contracts";
 import deployedContracts from "./contracts/hardhat_contracts.json";
 import uniqid from "uniqid";
 import * as XLSX from "xlsx";
-const csv = require("csv-parser");
-const fs = require("fs");
 
 const formatDate = epochTime => {
   const date = new Date(epochTime * 1000);
@@ -785,6 +783,33 @@ function App(props) {
                     }}
                   />
                 </div>
+             {/* <div>
+                <Divider orientation="left" ></Divider>
+                <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
+                    <Col className="gutter-row" span={6}>
+                        <div>Backstage Pass</div>
+                        <Button>0.01 ETH</Button>
+                        <Button>Pay</Button>
+                    </Col>
+                    <Col className="gutter-row" span={6}>
+                        <div>NestCoin Cap</div>
+                        <Button>0.01 ETH</Button>
+                        <Button>Pay</Button>
+                    </Col>
+                    <Col className="gutter-row" span={6}>
+                        <div>NestCoin Hoodie</div>
+                        <Button>0.01 ETH</Button>
+                        <Button>Pay</Button>
+                    </Col>
+                    <Col className="gutter-row" span={6}>
+                        <div>Movie Tickets</div>
+                        <Button>0.01 ETH</Button>
+                        <Button>Pay</Button>                      
+                    </Col>                  
+                </Row>
+              </div> */}
+
+
                 <div style={{ padding: 8 }}>
                   <Input type="text" style={{ textAlign: "center" }} placeholder={"Ref"} value={paymentRef} disabled/>
                 </div>
@@ -843,6 +868,7 @@ function App(props) {
                 )}
               </Card>
             </div>
+
 
             <div style={{ padding: 8, marginTop: 32 }}>
               <div>Your Nestcoin Balance:</div>
