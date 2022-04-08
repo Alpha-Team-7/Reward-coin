@@ -783,6 +783,33 @@ function App(props) {
                     }}
                   />
                 </div>
+             {/* <div>
+                <Divider orientation="left" ></Divider>
+                <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
+                    <Col className="gutter-row" span={6}>
+                        <div>Backstage Pass</div>
+                        <Button>0.01 ETH</Button>
+                        <Button>Pay</Button>
+                    </Col>
+                    <Col className="gutter-row" span={6}>
+                        <div>NestCoin Cap</div>
+                        <Button>0.01 ETH</Button>
+                        <Button>Pay</Button>
+                    </Col>
+                    <Col className="gutter-row" span={6}>
+                        <div>NestCoin Hoodie</div>
+                        <Button>0.01 ETH</Button>
+                        <Button>Pay</Button>
+                    </Col>
+                    <Col className="gutter-row" span={6}>
+                        <div>Movie Tickets</div>
+                        <Button>0.01 ETH</Button>
+                        <Button>Pay</Button>                      
+                    </Col>                  
+                </Row>
+              </div> */}
+
+
                 <div style={{ padding: 8 }}>
                   <Input type="text" style={{ textAlign: "center" }} placeholder={"Ref"} value={paymentRef} disabled/>
                 </div>
@@ -841,6 +868,7 @@ function App(props) {
                 )}
               </Card>
             </div>
+
 
             <div style={{ padding: 8, marginTop: 32 }}>
               <div>Your Nestcoin Balance:</div>
